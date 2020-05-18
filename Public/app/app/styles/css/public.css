@@ -1,0 +1,212 @@
+/***public style****/
+body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, b, small, u, i, center, dl, dt, dd, ol, ul, li,  sub, sup, tt, var, del, dfn,  ins, kbd, q, s, samp,  strike, applet, object, iframe, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, blockquote, pre, a, abbr, acronym, address, big, cite, code, mark, audio, video, input, textarea, select { margin:0; padding:0;}
+
+ol, ul{list-style:none;}
+
+html {
+  overflow-x:hidden;
+  -webkit-text-size-adjust:none;
+}
+
+body {
+  font-size:14px;
+  font-family:"Pingfang SC","Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#4a4a4a;
+  font-size: 14px;
+  font-weight: 300px;
+}
+
+/*a 链接*/
+a {
+  text-decoration:none;
+  outline:none;
+  color:#4a4a4a;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/*图片居中*/
+.jzimg{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.jzimg img{
+  max-width: 100%;
+  max-height: 100%;
+}
+img{ border:0}
+
+/*em/i去除样式*/
+i,em,strong{ font-style:normal}
+
+/*浮动*/
+.fl {float:left;}
+.fr {float:right;}
+.clear { clear:both}
+.clearfix { *zoom:1;}
+.clearfix:after{
+  clear:both;
+  display:block;
+  height:0;
+  visibility:hidden;
+  line-height:0;
+  content:'\20';
+}
+
+/* 表单样式 */
+input, button, textarea, select { 
+  font-size:100%; 
+  outline:none; 
+  resize:none;
+  border: none;
+  margin: 0;
+}
+input:focus, button:focus, textarea:focus, select:focus { 
+  outline:none;
+}
+input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea{
+  margin: 0;
+  line-height: auto;
+}
+
+input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
+  border-bottom: none;
+  box-shadow: none;
+}
+
+input,select{
+  -webkit-appearance: none;
+}
+
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav{
+  box-shadow: none;
+}
+
+.btn.disabled, .disabled.btn-large, .btn-floating.disabled, .btn-large.disabled, .btn:disabled, .btn-large:disabled, .btn-large:disabled, .btn-floating:disabled{
+  opacity: 0.5;
+  background-color: #5DA1E2 !important;
+  color: #fff !important;
+}
+
+/*删除火狐下按钮默认样式*/
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner{ 
+  border:none; 
+  padding:0; 
+}
+
+button[disabled], html input[disabled]{
+  opacity: 0.5;
+}
+
+/*字体大小、缩进*/
+.f10 { font-size:10px;}
+.f11 { font-size:11px;}
+.f12 { font-size:12px;}
+.f13 { font-size:13px;}
+.f14 { font-size:14px;}
+.f15 { font-size:15px;}
+.f16 { font-size:16px;}
+.f17{ font-size:17px;}
+.f18{ font-size:18px;}
+.f19{ font-size:19px;}
+.f20{ font-size:20px;}
+.f21{ font-size:21px;}
+.f22{ font-size:22px;}
+.f23{ font-size:23px;}
+.f24{ font-size:24px;}
+.f28{ font-size:28px;}
+.t2{text-indent:2em;}
+
+/*字体粗细*/
+.w300{ font-weight: 300; }
+.w400{ font-weight: 400; }
+.w500{ font-weight: 500; }
+.w600{ font-weight: 600; }
+
+/*上下间距*/
+.mb5 { margin-bottom:5px;}
+.mb10{ margin-bottom:10px;}
+.mb15{ margin-bottom:15px;}
+.mb20{ margin-bottom:20px;}
+.mb25{ margin-bottom:25px;}
+.mb30{ margin-bottom:30px;}
+.mb65{ margin-bottom:65px;}
+
+.mt5 { margin-top:5px;}
+.mt10{ margin-top:10px;}
+.mt15{ margin-top:15px;}
+.mt20{ margin-top:20px;}
+.mt25{ margin-top:25px;}
+.mt30{ margin-top:30px;}
+
+.pt15{ padding-top:15px;}
+.pb60{ padding-bottom:60px;}
+
+/*
+0.5px边框：
+1、单边：
+*/
+.perfect-border-bottom{
+  background-image: linear-gradient(0deg, #ccc, #ccc 50%, transparent 50%);
+  background-position: bottom;
+  background-size: 100% 1px;
+  background-repeat:no-repeat;
+}
+
+.perfect-border-top{
+  background-image: linear-gradient(0deg, #ccc, #ccc 50%, transparent 50%);
+  background-position: top;
+  background-size: 100% 1px;
+  background-repeat:no-repeat;
+}
+
+.perfect-border-left{
+  background-image: linear-gradient(0deg, #ccc, #ccc 50%, transparent 50%);
+  background-position: left;
+  background-size: 1px 100%;
+  background-repeat:no-repeat;
+}
+
+.perfect-border-right{
+  background-image: linear-gradient(0deg, #ccc, #ccc 50%, transparent 50%);
+  background-position: right;
+  background-size: 1px 100%;
+  background-repeat:no-repeat;
+}
+
+/*全边：
+span:before{
+  border:1px solid #ccc;
+}//需要细边框的元素设置border颜色，加上perfect-all-border即可
+*/
+.perfect-all-border{
+  position: relative;
+}
+
+.perfect-all-border:before{
+  position: relative;
+  content: '';  
+  position: absolute;  
+  left: 0;  
+  top: 0;  
+  width: 200%;  
+  height: 200%;  
+  transform: scale(.5, .5);  
+  box-sizing: border-box;  
+  transform-origin: 0 0;
+}
+
+input:-webkit-autofill { 
+-webkit-box-shadow: 0 0 0px 1000px white inset; 
+border: none !important;
+color: #aaa;
+  font-weight: 200;
+  font-family: "Pingfang SC";
+} 

@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="__ADDONROOT__/style/UploadFiles.css">
+<style type="text/css">
+    .uploadify-button {
+        color: #fff;
+        background-color: #23b7e5;
+    }
+    .uploadify-button:hover{
+        background-color: #19a9d5;
+    }
+</style>
+<input type="file" id="upload_file_{$name}">
+<input type="hidden" name="{$name}" value="{$valStr}" class="icon {$name}" />
+<div class="upload-file-box">
+    <notempty name="valArr">
+         <volist name="valArr" id="vo">
+            <div class="upload-pre-file" data-id="{$vo.id}">
+                <span class="upload_icon_all"></span>
+                <span>{$vo.name}</span>
+                <span class="iconfont icon-cancel cancel-{$vo.id}" onclick="cancel({$vo.id})">x</span>
+            </div>
+         </volist>
+    </notempty>
+</div>
+<script type="text/javascript">
+    //上传图片
+    /* 初始化上传插件*/
+    $("#upload_file_{$name}").uploadifive({
+        'auto'            : true,
+        "height"          : 30,
+        "fileObjName"     : "download",
+        "buttonText"      : "上传附件",
+        'buttonClass'     : "uploadify-button",
+        "uploadScript"    : "{:U('File/upload',array('session_id'=>session_id()))}",
+        "width"           : 120,
+        'removeTimeout'   : 1,
+        'onUploadComplete' : function(file,data) {uploadFile{$name}(file,data)}
+    });
+
+    function cancel(id){
+        $(".cancel-"+id+"").parent().remove();
+        picsbox = $('.upload-file-box');
+        picArr = [];
+        for (var i = 0; i < picsbox.children().length ; i++) {
+            picArr.push(picsbox.children('.upload-pre-file:eq('+i+')').attr('data-id'));
+        };
+        picStr = picArr.join(',');
+        $('.icon.{$name}').val(picStr);
+    }
+
+    function uploadFile{$name}(file, data){
+        var data = $.parseJSON(data);
+        var src = '';
+        if(data.status){
+            src = data.url || '__ROOT__' + data.path;
+            upload_img = "<div class='upload-pre-file' data-id=\""+data.id+"\"><span class=\"upload_icon_all\"></span><span>"+data.info+"</span><span class='iconfont icon-cancel cancel-"+data.id+"' onclick='cancel("+data.id+")'>x</span></div>";
+            picsbox = $('.upload-file-box');
+            picsbox.append(upload_img);
+            picArr = [];
+            for (var i = 0; i < picsbox.children().length ; i++) {
+                picArr.push(picsbox.children('.upload-pre-file:eq('+i+')').attr('data-id'));
+            };
+
+            picStr = picArr.join(',');
+            $('.icon.{$name}').val(picStr);
+        } else {
+            updateAlert(data.info);
+            setTimeout(function(){
+                $('#top-alert').find('button').click();
+                // $(that).removeClass('disabled').prop('disabled',false);
+            },1500);
+        }
+    }
+</script>

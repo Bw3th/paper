@@ -1,0 +1,84 @@
+<div id="title-box">
+        <span class="return-icon" ng-click="gotoMap()">
+            <i class="iconfont iconfanhui"></i>
+        </span>
+    <span>{{info.name}}</span>
+    <span class="home-icon" ng-click="gotoHome()">
+            <i class="iconfont iconindex-0"></i>
+        </span>
+</div>
+<div id="box" style="padding-top: 1px;">
+    <div class="info-box" style="padding-top: 60px;">
+        <div class="doctor-box">
+            <span class="doctor-avatar" style="top: 18px;">
+                <img ng-src="{{'images/banner1.jpg'}}">
+            </span>
+            <span class="doctor-info">
+                <p style="margin-bottom: 10px;"><span style="font-size: 14px;font-weight: 600;">{{info.name}}</span></p>
+                <p style="margin-bottom: 10px;">{{info.title}}</p>
+                <!--<p>中南大学湘雅医院</p>-->
+            </span>
+        </div>
+    </div>
+    <div class="option-box">
+        <div class="option-item"  ng-click="selectCont(1)" ng-class="{selectCont:selectInfo == 1}">科室信息<i class="iconfont iconup"></i></div>
+        <div class="option-item" ng-click="selectCont(2)" ng-class="{selectCont:selectInfo == 2}">专家介绍<i class="iconfont iconup"></i></div>
+    </div>
+    <div class="department-info" ng-if="selectInfo == 1">
+        {{info.info}}
+    </div>
+    <div class="doctor-list" ng-if="selectInfo == 2">
+        <div class="live-item" style="border-top: 0;border-bottom: 1px solid #F0F0F0;" ng-repeat="list in doctorInfo" ng-click="gotoDetail(list.id)">
+            <div class="item-avatar">
+                <img ng-src="{{'images/banner1.jpg'}}">
+            </div>
+            <div class="item-cont">
+                <p class="cont-title">{{list.name}}</p>
+                <p class="cont-teacher" style="margin-top: 0;">{{list.title}}</p>
+                <p class="cont-time" style="margin-top: 0;">{{list.class}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="praise-box" ng-if="selectInfo == 1">
+    <i class="iconfont iconzan"></i>
+</div>
+<style>
+    .option-box{
+        width: 100%;
+        height: 40px;
+        /*background: #aaaaaa;*/
+        z-index: 999;
+        display:-webkit-flex;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .option-box .option-item{
+        flex: 1;
+        text-align: center;
+        box-sizing: border-box;
+        height: 40px;
+        line-height: 40px;
+    }
+    .selectCont{
+        height: 40px;
+        line-height: 40px;
+        background: orange;
+        color: #ffffff;
+        outline: 0;
+    }
+    .department-info{
+        background: #ffffff;
+        padding: 20px 10px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 205px;
+        bottom: 0;
+    }
+    .doctor-list{
+        background: #ffffff;
+        padding-left: 10px;
+    }
+</style>

@@ -1,0 +1,66 @@
+<div id="title-box">
+    <span class="return-icon" ng-click="gotoHome()">
+        <i class="iconfont iconfanhui"></i>
+    </span>
+    <span>诊疗地图</span>
+    <span class="home-icon" ng-click="gotoHome()">
+            <i class="iconfont iconindex-0"></i>
+    </span>
+</div>
+<div class="search-box">
+    <input type="text" ng-model="cont" placeholder="输入医院名称或专家姓名" ng-change="getList()">
+    <i class="iconfont iconsousuo"></i>
+</div>
+<div id="box" style="padding-top: 0;background: #ffffff;margin-top: 80px;">
+    <div class="live-list" style="margin-bottom: 45px;">
+        <div class="live-item" style="border-top: 0;border-bottom: 1px solid #F0F0F0;" ng-repeat="list in hospitalList" ng-click="gotoDetail(list.id,list.pid)">
+            <div class="item-avatar">
+                <img ng-src="{{'images/banner1.jpg'}}">
+            </div>
+            <div class="item-cont">
+                <p class="cont-title">{{list.name}}</p>
+                <!--<p class="cont-teacher">讲课老师：张三 复旦大学附属肿瘤医院</p>-->
+                <p class="cont-time"><span>{{list.provincialname}}</span><span style="float: right;">{{list.pid ==0?list.title:list.hospital_name}}</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="option-box">
+    <div style="border-right: 1px solid #F0F0EE;">
+        <select style="border: none;background: none;-webkit-appearance: none;text-align: center;text-align-last: center;" ng-model = "provincial.id " ng-change="getList()">
+            <option value="" style="background: none;" selected="selected" >省份</option>
+            <option ng-repeat="list in provincialList" value="{{list.id}}" style="text-align: center;text-align-last: center;background: none;">{{list.provincialname}}</option>
+            <!--<option value="天津" style="text-align: center;text-align-last: center;background: none;">天津</option>-->
+        </select>
+        <!--<i class="iconfont iconicon-shang"></i>-->
+    </div>
+    <div>
+        <select style="border: none;background: none;-webkit-appearance: none;text-align: center;text-align-last: center;" ng-model = "city.id " ng-change="getList()">
+            <option value="" style="background: none;" selected="selected" >城市</option>
+            <option ng-repeat="list in cityList" value="{{list.id}}" style="text-align: center;text-align-last: center;background: none;">{{list.cityname}}</option>
+        </select>
+        <!--<i class="iconfont iconicon-shang"></i>-->
+    </div>
+</div>
+<style>
+    .option-box{
+        width: 100%;
+        height: 40px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: #ffffff;
+        z-index: 999;
+        border-top: 1px solid #F0F0EE;
+        display:-webkit-flex;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .option-box div{
+        flex: 1;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+</style>

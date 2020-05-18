@@ -1,0 +1,46 @@
+<div id="title-box">
+        <span class="return-icon" ng-click="gotoLive()">
+            <i class="iconfont iconfanhui"></i>
+        </span>
+    <span>预约直播</span>
+    <span class="home-icon" ng-click="gotoHome()">
+            <i class="iconfont iconindex-0"></i>
+        </span>
+</div>
+<div id="box" style="padding: 0;">
+    <div class="img-box">
+        <img ng-src="{{'images/banner1.jpg'}}">
+    </div>
+    <div class="info-box">
+        <div class="title-box" style="border-bottom: 1px solid #F0F0F0;">
+            <span class="title-name">
+                <i class="iconfont iconshejiao_tuan_xingxing_"></i>
+                <span>讲题</span>
+            </span>
+            <span class="title-cont">{{info.live_title}}</span>
+        </div>
+        <div class="title-box">
+            <span class="title-name">
+                <i class="iconfont iconshijian"></i>
+                <span>时间</span>
+            </span>
+            <span class="title-cont">2019.11.12 16：00-17：00</span>
+        </div>
+        <div class="doctor-box">
+            <span class="doctor-avatar">
+                <img ng-src="{{'images/banner1.jpg'}}">
+            </span>
+            <span class="doctor-info">
+                <p style="margin-bottom: 10px;"><span style="font-size: 14px;font-weight: 600;">{{info.name}}</span><span style="margin-left: 10px;">{{info.title}}</span></p>
+                <p style="margin-bottom: 10px;">{{info.class}}</p>
+                <p>{{info.hospital_name}}</p>
+            </span>
+        </div>
+    </div>
+    <div class="introduce-box">
+        <p>{{info.info}}</p>
+    </div>
+    <div class="liveBtn-box">
+        直播已结束，点击观看回放
+    </div>
+</div>

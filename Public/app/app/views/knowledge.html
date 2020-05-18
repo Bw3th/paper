@@ -1,0 +1,23 @@
+<div id="title-box">
+        <span class="return-icon" ng-click="gotoHome()">
+            <i class="iconfont iconfanhui"></i>
+        </span>
+    <span>疾病知识</span>
+    <span class="home-icon" ng-click="gotoHome()">
+            <i class="iconfont iconindex-0"></i>
+        </span>
+</div>
+<div id="box" style="padding-top: 0;background: #ffffff;">
+    <div class="knowledge-list">
+        <div class="knowledge-item" ng-repeat="list in knowledgeList" ng-click="gotoDetail(list.id)">
+            <span class="knowledge-img">
+                <img ng-src="{{'images/banner1.jpg'}}">
+            </span>
+            <span class="knowledge-info">
+                <p class="knowledge-title">{{list.title}}</p>
+                <p class="knowledge-desc">{{list.info}}</p>
+                <p class="knowledge-author">{{list.author}}</p>
+            </span>
+        </div>
+    </div>
+</div>

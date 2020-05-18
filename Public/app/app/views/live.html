@@ -1,0 +1,33 @@
+<div id="title-box">
+        <span class="return-icon" ng-click="gotoHome()">
+            <i class="iconfont iconfanhui"></i>
+        </span>
+    <span>预约直播</span>
+    <span class="home-icon" ng-click="gotoHome()">
+            <i class="iconfont iconindex-0"></i>
+        </span>
+</div>
+<div id="box">
+    <div class="live-box">
+        <span class="live-icon">
+            <i class="iconfont iconzhibobofangshexiangjitianxianxianxing"></i>
+        </span>
+        <div>当前无可预约直播</div>
+    </div>
+
+    <div class="live-list">
+        <div class="list-title">
+            往期直播
+        </div>
+        <div class="live-item" ng-repeat="list in liveList" ng-click="gotoDetail(list.id)">
+            <div class="item-avatar">
+                <img ng-src="{{'images/banner1.jpg'}}">
+            </div>
+            <div class="item-cont">
+                <p class="cont-title">{{list.live_title}}</p>
+                <p class="cont-teacher">讲课老师：{{list.name}} {{list.hospital_name}}</p>
+                <p class="cont-time">直播时间：2018.08.16 16:00-17:00</p>
+            </div>
+        </div>
+    </div>
+</div>

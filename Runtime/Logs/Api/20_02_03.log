@@ -1,0 +1,12 @@
+[ 2020-02-03T16:06:09+08:00 ] ::1 /applecm/index.php/api/live/getLiveList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005664s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001009s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001089s ]
+SQL: SHOW COLUMNS FROM `live` [ RunTime:0.0043s ]
+SQL: SELECT l.id,l.title as live_title,l.begin_time,l.end_time,h.name,h.img,h1.name as hospital_name FROM live l left join hospital as h on l.hospital_id = h.id left join hospital as h1 on h.pid = h1.id  WHERE l.is_deleted = 0 ORDER BY l.create_time desc  [ RunTime:0.0040s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\LiveController.class.php 第 29 行.
+

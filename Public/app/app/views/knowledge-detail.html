@@ -1,0 +1,22 @@
+<div id="title-box">
+        <span class="return-icon" ng-click="gotoKnowledge()">
+            <i class="iconfont iconfanhui"></i>
+        </span>
+    <span>疾病知识</span>
+    <span class="home-icon" ng-click="gotoHome()">
+            <i class="iconfont iconindex-0"></i>
+        </span>
+</div>
+<div id="box" style="padding-top: 0;background: #ffffff;">
+  <div class="article-detail">
+      <p class="article-title">
+          {{info.title}}
+      </p>
+      <p class="article-date">
+          {{info.create_time*1000 | date:'yyyy-MM-dd'}}
+      </p>
+      <p class="article-cont">
+          {{info.info}}
+      </p>
+  </div>
+</div>

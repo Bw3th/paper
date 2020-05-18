@@ -1,0 +1,455 @@
+[ 2020-01-16T09:22:27+08:00 ] ::1 /applecm/index.php/api/live/getLiveList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006184s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006820s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000711s ]
+SQL: SHOW COLUMNS FROM `live` [ RunTime:0.0260s ]
+SQL: SELECT l.id,l.title as live_title,l.begin_time,l.end_time,h.name,h.img,h1.name as hospital_name FROM live l left join hospital as h on l.hospital_id = h.id left join hospital as h1 on h.pid = h1.id  WHERE l.is_deleted = 0 ORDER BY l.create_time desc  [ RunTime:0.0096s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\LiveController.class.php 第 29 行.
+
+[ 2020-01-16T09:22:29+08:00 ] ::1 /applecm/index.php/api/live/getLiveDetail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002203s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000512s ]
+SQL: SHOW COLUMNS FROM `live` [ RunTime:0.0010s ]
+SQL: SELECT l.title as live_title,l.img as live_img,l.info,l.begin_time,l.end_time,h.name,h.img,h.class,h.title,h1.name as hospital_name FROM live l left join hospital as h on l.hospital_id = h.id left join hospital as h1 on h.pid = h1.id  WHERE l.id = '1' LIMIT 1   [ RunTime:0.0018s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\LiveController.class.php 第 47 行.
+
+[ 2020-01-16T09:22:33+08:00 ] ::1 /applecm/index.php/api/live/getLiveList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `live` [ RunTime:0.0011s ]
+SQL: SELECT l.id,l.title as live_title,l.begin_time,l.end_time,h.name,h.img,h1.name as hospital_name FROM live l left join hospital as h on l.hospital_id = h.id left join hospital as h1 on h.pid = h1.id  WHERE l.is_deleted = 0 ORDER BY l.create_time desc  [ RunTime:0.0012s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\LiveController.class.php 第 29 行.
+
+[ 2020-01-16T09:22:35+08:00 ] ::1 /applecm/index.php/api/knowledge/getKnowledgeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0025s ]
+SQL: SELECT `id`,`title`,`info`,`img`,`author` FROM `knowledge` WHERE `is_deleted` = 0 ORDER BY create_time desc  [ RunTime:0.0003s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\KnowledgeController.class.php 第 26 行.
+
+[ 2020-01-16T09:22:36+08:00 ] ::1 /applecm/index.php/api/knowledge/getKnowledgeDetail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002521s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002838s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0054s ]
+SQL: SELECT `title`,`info`,`create_time` FROM `knowledge` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\KnowledgeController.class.php 第 41 行.
+
+[ 2020-01-16T09:22:38+08:00 ] ::1 /applecm/index.php/api/knowledge/getKnowledgeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001708s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002070s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0011s ]
+SQL: SELECT `id`,`title`,`info`,`img`,`author` FROM `knowledge` WHERE `is_deleted` = 0 ORDER BY create_time desc  [ RunTime:0.0002s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\KnowledgeController.class.php 第 26 行.
+
+[ 2020-01-16T09:22:40+08:00 ] ::1 /applecm/index.php/api/help/getHelpList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001674s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001998s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000458s ]
+SQL: SHOW COLUMNS FROM `help` [ RunTime:0.0023s ]
+SQL: SELECT `id`,`title`,`img`,`author` FROM `help` WHERE `is_deleted` = 0 ORDER BY create_time desc  [ RunTime:0.0003s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\HelpController.class.php 第 26 行.
+
+[ 2020-01-16T09:22:41+08:00 ] ::1 /applecm/index.php/api/help/getHelpDetail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002128s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+SQL: SHOW COLUMNS FROM `help` [ RunTime:0.0014s ]
+SQL: SELECT `title`,`create_time`,`video` FROM `help` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\HelpController.class.php 第 41 行.
+
+[ 2020-01-16T09:22:44+08:00 ] ::1 /applecm/index.php/api/help/getHelpList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001908s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+SQL: SHOW COLUMNS FROM `help` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`img`,`author` FROM `help` WHERE `is_deleted` = 0 ORDER BY create_time desc  [ RunTime:0.0003s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\HelpController.class.php 第 26 行.
+
+[ 2020-01-16T09:22:46+08:00 ] ::1 /applecm/index.php/api/class/getClassList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001811s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002184s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0027s ]
+SQL: SELECT c.id,c.img,c.title,h.name,h1.name as hospital_name FROM class c left join hospital as h on c.hospital_id = h.id left join hospital as h1 on h.pid = h1.id  WHERE c.is_deleted = 0 ORDER BY c.id desc  [ RunTime:0.0017s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\ClassController.class.php 第 29 行.
+
+[ 2020-01-16T09:22:48+08:00 ] ::1 /applecm/index.php/api/class/getClassDetail?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001900s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0123s ]
+SQL: SELECT c.title as class_title,c.video,c.info,h.name,h.title,h.class,h1.name as hospital_name FROM class c left join hospital as h on c.hospital_id = h.id left join hospital as h1 on h.pid = h1.id  WHERE c.id = '2' LIMIT 1   [ RunTime:0.0013s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\ClassController.class.php 第 47 行.
+
+[ 2020-01-16T09:22:51+08:00 ] ::1 /applecm/index.php/api/class/getClassList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001992s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0014s ]
+SQL: SELECT c.id,c.img,c.title,h.name,h1.name as hospital_name FROM class c left join hospital as h on c.hospital_id = h.id left join hospital as h1 on h.pid = h1.id  WHERE c.is_deleted = 0 ORDER BY c.id desc  [ RunTime:0.0014s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\ClassController.class.php 第 29 行.
+
+[ 2020-01-16T09:22:55+08:00 ] ::1 /applecm/index.php/api/answer/getAnswerList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001872s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+SQL: SHOW COLUMNS FROM `faq` [ RunTime:0.0020s ]
+SQL: SELECT faq.id,faq.title,faq.img,h.name,h1.name as hospital_name FROM `faq` left join hospital as h on faq.hospital_id = h.id left join hospital as h1 on h.pid = h1.id  WHERE faq.is_deleted = 0 ORDER BY faq.sort desc  [ RunTime:0.0012s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\AnswerController.class.php 第 28 行.
+
+[ 2020-01-16T09:22:58+08:00 ] ::1 /applecm/index.php/api/map/getHospitalList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001907s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+NOTIC: [8] Undefined index: provincial_id C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\MapController.class.php 第 62 行.
+NOTIC: [8] Undefined index: city_id C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\MapController.class.php 第 67 行.
+SQL: SHOW COLUMNS FROM `hospital` [ RunTime:0.0226s ]
+SQL: SELECT h.id,h.name,h.title,h.level,h.img,h.pid,p.provincialName,h1.name as hospital_name FROM hospital h left join provincial as p on h.provincial_id = p.id left join hospital as h1 on h.pid = h1.id  WHERE h.pid = 0 AND h.is_deleted = 0 ORDER BY h.pid,h.id  [ RunTime:0.0057s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\MapController.class.php 第 81 行.
+
+[ 2020-01-16T09:22:59+08:00 ] ::1 /applecm/index.php/api/map/getProvincialList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002389s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002899s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000771s ]
+SQL: SHOW COLUMNS FROM `provincial` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`provincialName` FROM `provincial` WHERE `is_deleted` = 0 ORDER BY id  [ RunTime:0.0003s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\MapController.class.php 第 26 行.
+
+[ 2020-01-16T11:07:43+08:00 ] ::1 /applecm/index.php/api/live/getLiveList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002872s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003488s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+SQL: SHOW COLUMNS FROM `live` [ RunTime:0.0018s ]
+SQL: SELECT l.id,l.title as live_title,l.begin_time,l.end_time,h.name,h.img,h1.name as hospital_name FROM live l left join hospital as h on l.hospital_id = h.id left join hospital as h1 on h.pid = h1.id  WHERE l.is_deleted = 0 ORDER BY l.create_time desc  [ RunTime:0.0015s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\LiveController.class.php 第 29 行.
+
+[ 2020-01-16T11:07:46+08:00 ] ::1 /applecm/index.php/api/knowledge/getKnowledgeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001866s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002302s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000592s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0012s ]
+SQL: SELECT `id`,`title`,`info`,`img`,`author` FROM `knowledge` WHERE `is_deleted` = 0 ORDER BY create_time desc  [ RunTime:0.0003s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\KnowledgeController.class.php 第 26 行.
+
+[ 2020-01-16T11:07:47+08:00 ] ::1 /applecm/index.php/api/knowledge/getKnowledgeDetail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001905s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000520s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0013s ]
+SQL: SELECT `title`,`info`,`create_time` FROM `knowledge` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\KnowledgeController.class.php 第 41 行.
+
+[ 2020-01-16T11:07:48+08:00 ] ::1 /applecm/index.php/api/knowledge/getKnowledgeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002126s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001750s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0026s ]
+SQL: SELECT `id`,`title`,`info`,`img`,`author` FROM `knowledge` WHERE `is_deleted` = 0 ORDER BY create_time desc  [ RunTime:0.0003s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\KnowledgeController.class.php 第 26 行.
+
+[ 2020-01-16T11:07:50+08:00 ] ::1 /applecm/index.php/api/help/getHelpList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001917s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+SQL: SHOW COLUMNS FROM `help` [ RunTime:0.0012s ]
+SQL: SELECT `id`,`title`,`img`,`author` FROM `help` WHERE `is_deleted` = 0 ORDER BY create_time desc  [ RunTime:0.0003s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\HelpController.class.php 第 26 行.
+
+[ 2020-01-16T11:07:51+08:00 ] ::1 /applecm/index.php/api/help/getHelpDetail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003493s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004154s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001171s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001246s ]
+SQL: SHOW COLUMNS FROM `help` [ RunTime:0.0012s ]
+SQL: SELECT `title`,`create_time`,`video` FROM `help` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\HelpController.class.php 第 41 行.
+
+[ 2020-01-16T11:07:52+08:00 ] ::1 /applecm/index.php/api/help/getHelpList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002605s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000863s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000896s ]
+SQL: SHOW COLUMNS FROM `help` [ RunTime:0.0012s ]
+SQL: SELECT `id`,`title`,`img`,`author` FROM `help` WHERE `is_deleted` = 0 ORDER BY create_time desc  [ RunTime:0.0003s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\HelpController.class.php 第 26 行.
+
+[ 2020-01-16T11:07:54+08:00 ] ::1 /applecm/index.php/api/class/getClassList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001897s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0012s ]
+SQL: SELECT c.id,c.img,c.title,h.name,h1.name as hospital_name FROM class c left join hospital as h on c.hospital_id = h.id left join hospital as h1 on h.pid = h1.id  WHERE c.is_deleted = 0 ORDER BY c.id desc  [ RunTime:0.0120s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\ClassController.class.php 第 29 行.
+
+[ 2020-01-16T11:07:55+08:00 ] ::1 /applecm/index.php/api/class/getClassDetail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003282s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003703s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0012s ]
+SQL: SELECT c.title as class_title,c.video,c.info,h.name,h.title,h.class,h1.name as hospital_name FROM class c left join hospital as h on c.hospital_id = h.id left join hospital as h1 on h.pid = h1.id  WHERE c.id = '1' LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\ClassController.class.php 第 47 行.
+
+[ 2020-01-16T11:07:58+08:00 ] ::1 /applecm/index.php/api/class/getClassList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001827s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002167s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0015s ]
+SQL: SELECT c.id,c.img,c.title,h.name,h1.name as hospital_name FROM class c left join hospital as h on c.hospital_id = h.id left join hospital as h1 on h.pid = h1.id  WHERE c.is_deleted = 0 ORDER BY c.id desc  [ RunTime:0.0006s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\ClassController.class.php 第 29 行.
+
+[ 2020-01-16T11:08:00+08:00 ] ::1 /applecm/index.php/api/answer/getAnswerList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003220s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+SQL: SHOW COLUMNS FROM `faq` [ RunTime:0.0013s ]
+SQL: SELECT faq.id,faq.title,faq.img,h.name,h1.name as hospital_name FROM `faq` left join hospital as h on faq.hospital_id = h.id left join hospital as h1 on h.pid = h1.id  WHERE faq.is_deleted = 0 ORDER BY faq.sort desc  [ RunTime:0.0005s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\AnswerController.class.php 第 28 行.
+
+[ 2020-01-16T11:08:01+08:00 ] ::1 /applecm/index.php/api/answer/getAnswerDetail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001886s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+SQL: SHOW COLUMNS FROM `faq` [ RunTime:0.0011s ]
+SQL: SELECT faq.title as faq_title,h.name,h.title,h.class,h1.name as hospital_name FROM `faq` left join hospital as h on faq.hospital_id = h.id left join hospital as h1 on h.pid = h1.id  LIMIT 1   [ RunTime:0.0082s ]
+SQL: SELECT fd.num,fd.question,fd.desc,fd.answer FROM faq f left join faq_detail as fd on f.id = fd.faq_id  WHERE f.id = '1' AND fd.is_deleted = 0 ORDER BY fd.num  [ RunTime:0.0022s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\AnswerController.class.php 第 55 行.
+
+[ 2020-01-16T11:08:02+08:00 ] ::1 /applecm/index.php/api/answer/getAnswerList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001935s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000512s ]
+SQL: SHOW COLUMNS FROM `faq` [ RunTime:0.0011s ]
+SQL: SELECT faq.id,faq.title,faq.img,h.name,h1.name as hospital_name FROM `faq` left join hospital as h on faq.hospital_id = h.id left join hospital as h1 on h.pid = h1.id  WHERE faq.is_deleted = 0 ORDER BY faq.sort desc  [ RunTime:0.0022s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\AnswerController.class.php 第 28 行.
+
+[ 2020-01-16T11:08:04+08:00 ] ::1 /applecm/index.php/api/map/getHospitalList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001907s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+NOTIC: [8] Undefined index: provincial_id C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\MapController.class.php 第 62 行.
+NOTIC: [8] Undefined index: city_id C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\MapController.class.php 第 67 行.
+SQL: SHOW COLUMNS FROM `hospital` [ RunTime:0.0013s ]
+SQL: SELECT h.id,h.name,h.title,h.level,h.img,h.pid,p.provincialName,h1.name as hospital_name FROM hospital h left join provincial as p on h.provincial_id = p.id left join hospital as h1 on h.pid = h1.id  WHERE h.pid = 0 AND h.is_deleted = 0 ORDER BY h.pid,h.id  [ RunTime:0.0015s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\MapController.class.php 第 81 行.
+
+[ 2020-01-16T11:08:05+08:00 ] ::1 /applecm/index.php/api/map/getProvincialList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002228s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000766s ]
+SQL: SHOW COLUMNS FROM `provincial` [ RunTime:0.0013s ]
+SQL: SELECT `id`,`provincialName` FROM `provincial` WHERE `is_deleted` = 0 ORDER BY id  [ RunTime:0.0003s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\MapController.class.php 第 26 行.
+
+[ 2020-01-16T11:08:06+08:00 ] ::1 /applecm/index.php/api/map/getHospitalDetail?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002502s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002949s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000671s ]
+SQL: SHOW COLUMNS FROM `hospital` [ RunTime:0.0012s ]
+SQL: SELECT `id`,`name`,`title`,`level`,`img`,`info` FROM `hospital` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`title`,`img`,`class` FROM `hospital` WHERE `pid` = 2 ORDER BY id  [ RunTime:0.0002s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\MapController.class.php 第 101 行.
+
+[ 2020-01-16T11:08:07+08:00 ] ::1 /applecm/index.php/api/map/getHospitalList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002692s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000708s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+NOTIC: [8] Undefined index: provincial_id C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\MapController.class.php 第 62 行.
+NOTIC: [8] Undefined index: city_id C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\MapController.class.php 第 67 行.
+SQL: SHOW COLUMNS FROM `hospital` [ RunTime:0.0009s ]
+SQL: SELECT h.id,h.name,h.title,h.level,h.img,h.pid,p.provincialName,h1.name as hospital_name FROM hospital h left join provincial as p on h.provincial_id = p.id left join hospital as h1 on h.pid = h1.id  WHERE h.pid = 0 AND h.is_deleted = 0 ORDER BY h.pid,h.id  [ RunTime:0.0017s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\MapController.class.php 第 81 行.
+
+[ 2020-01-16T11:08:08+08:00 ] ::1 /applecm/index.php/api/map/getHospitalDetail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000919s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001005s ]
+SQL: SHOW COLUMNS FROM `hospital` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`name`,`title`,`level`,`img`,`info` FROM `hospital` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`title`,`img`,`class` FROM `hospital` WHERE `pid` = 1 ORDER BY id  [ RunTime:0.0003s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\MapController.class.php 第 101 行.
+
+[ 2020-01-16T11:08:08+08:00 ] ::1 /applecm/index.php/api/map/getProvincialList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002234s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002750s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+SQL: SHOW COLUMNS FROM `provincial` [ RunTime:0.0012s ]
+SQL: SELECT `id`,`provincialName` FROM `provincial` WHERE `is_deleted` = 0 ORDER BY id  [ RunTime:0.0003s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\MapController.class.php 第 26 行.
+
+[ 2020-01-16T11:08:11+08:00 ] ::1 /applecm/index.php/api/map/getHospitalList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002157s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+NOTIC: [8] Undefined index: provincial_id C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\MapController.class.php 第 62 行.
+NOTIC: [8] Undefined index: city_id C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\MapController.class.php 第 67 行.
+SQL: SHOW COLUMNS FROM `hospital` [ RunTime:0.0007s ]
+SQL: SELECT h.id,h.name,h.title,h.level,h.img,h.pid,p.provincialName,h1.name as hospital_name FROM hospital h left join provincial as p on h.provincial_id = p.id left join hospital as h1 on h.pid = h1.id  WHERE h.pid = 0 AND h.is_deleted = 0 ORDER BY h.pid,h.id  [ RunTime:0.0011s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\MapController.class.php 第 81 行.
+
+[ 2020-01-16T11:08:12+08:00 ] ::1 /applecm/index.php/api/map/getProvincialList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002397s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002906s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+SQL: SHOW COLUMNS FROM `provincial` [ RunTime:0.0012s ]
+SQL: SELECT `id`,`provincialName` FROM `provincial` WHERE `is_deleted` = 0 ORDER BY id  [ RunTime:0.0003s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\MapController.class.php 第 26 行.
+
+[ 2020-01-16T11:08:51+08:00 ] ::1 /applecm/index.php/api/help/getHelpList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001893s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000502s ]
+SQL: SHOW COLUMNS FROM `help` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title`,`img`,`author` FROM `help` WHERE `is_deleted` = 0 ORDER BY create_time desc  [ RunTime:0.0003s ]
+NOTIC: [2] Use of undefined constant json - assumed 'json' (this will throw an Error in a future version of PHP) C:\phpstudy_pro\WWW\applecm\Application\Api\Controller\HelpController.class.php 第 26 行.
+

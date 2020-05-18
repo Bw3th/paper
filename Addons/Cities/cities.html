@@ -1,0 +1,103 @@
+<script type="text/javascript" src="__STATIC__/uploadify/jquery.uploadify.min.js"></script>
+<style type="text/css">
+  .form_control{
+    display: block;
+    float: left;
+    width: 20%;
+    padding: 0;
+    margin-right: 10px;
+    font-size: 0.875rem;
+    line-height: 1.25;
+    color: #263238;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    height: 38px;
+  }
+  .box{
+    overflow: hidden;
+  }
+</style>
+<div class="box">
+  <select name="province" class="form_control">
+    <option value="">请选择</option>
+    <volist name="provinces" id="vo">
+      <if condition="$vo['id'] eq $province">
+        <option value="{$vo['id']}" selected>{$vo['shortname']}</option>
+      <else />
+        <option value="{$vo['id']}">{$vo['shortname']}</option>
+      </if>
+    </volist>
+  </select>
+  <select  name="city" class="form_control">
+    <option value="0">请选择</option>
+    <if condition="$citys neq null">
+      <volist name="citys" id="vo">
+        <if condition="$vo['id'] eq $city">
+          <option value="{$vo['id']}" selected>{$vo['name']}</option>
+        <else />
+          <option value="{$vo['id']}">{$vo['name']}</option>
+        </if>
+      </volist>
+    </if>
+  </select>
+  <select  name="district" class="form_control">
+    <option value="0">请选择</option>
+    <if condition="$districts neq null">
+      <volist name="districts" id="vo">
+        <if condition="$vo['id'] eq $district">
+          <option value="{$vo['id']}" selected>{$vo['name']}</option>
+        <else />
+          <option value="{$vo['id']}">{$vo['name']}</option>
+        </if>
+      </volist>
+    </if>
+  </select>
+</div>
+<script type="text/javascript">
+  $(function(){
+    $("[name='province']").change(function(){
+      $("[name='city']").html('<option>loading……</option>');
+      var current_province_id=$(this).val();
+      var url_city = "{:addons_url('Cities://Cities/getCity')}";
+      $.ajax({
+        url:url_city,
+        data:{ParentId:current_province_id},
+        dataType:"json",
+        type:"post",
+        success:function(re){
+          var html="<option value='0'>请选择</option>";
+          var item=re.data;
+          for(var i in item){
+            html +='<option value="'+item[i]['id']+'" >'+item[i]['name']+'</option>';
+          }
+          $("[name='city']").html(html);
+        }
+      })
+    })
+
+    $("[name='city']").change(function(){
+      $("[name='district']").html('<option>loading……</option>');
+      var current_city=$(this).val();
+      var url_country = "{:addons_url('Cities://Cities/getCounty')}";
+      $.ajax({
+        url:url_country,
+        data:{ParentId:current_city},
+        dataType:"json",
+        type:"post",
+        success:function(re){
+          var html="<option value='0'>请选择</option>";
+          var item=re.data;
+          for(var i in item){
+            html +='<option value="'+item[i]['id']+'" >'+item[i]['name']+'</option>';
+          }
+          $("[name='district']").html(html);
+        }
+      })
+    })
+
+  })
+</script>

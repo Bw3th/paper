@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+    .checkbox-label{
+      display: block;
+      float: left; 
+      width: 150px;
+      text-align:left;
+      line-height: 20px;
+      margin:0 0 10px !important;
+      font-size: 13px;
+    }
+    .checkbox-group{
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>   
+  <input type="hidden" name="{$name}" value="{$valStr}" class="{$name}" />
+  <div class="checkbox-group">
+    <volist name="data" id="vo">
+      <label class="checkbox-label checkbox-{$vo.id}">
+        <input type="checkbox" value="{$vo.id}" name="checkbox-{$name}" class="box-{$vo.id}"  onclick="checkOnClick()"> {$vo.$showname}
+      </label>
+    </volist>
+  </div>
+</body>
+</html>
+<script>
+function init(){
+  var value = $(".{$name}").val().split(",");
+  $('input[name="checkbox-{$name}"]').each(function(){
+    var inputVal = $(this).val();
+    for(var i=0;i<value.length;i++){
+      if(inputVal==value[i]){
+        $('.box-'+inputVal).attr("checked","true");
+      }
+    }
+  });
+}
+init();
+
+function checkOnClick(){
+  var array = [];
+  $("input[name='checkbox-{$name}']:checked").each(function(){
+    array.push($(this).val());
+  });
+  var member = array.join(',');
+  $('.{$name}').val(member);
+}
+</script>

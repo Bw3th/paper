@@ -1,0 +1,34 @@
+<div id="title-box">
+        <span class="return-icon" ng-click="gotoAnswer()">
+            <i class="iconfont iconfanhui"></i>
+        </span>
+    <span>{{info.doctor_info.faq_title}}</span>
+    <span class="home-icon" ng-click="gotoHome()">
+            <i class="iconfont iconindex-0"></i>
+        </span>
+</div>
+<div id="box" style="padding-top: 1px;">
+    <div class="info-box">
+        <div class="doctor-box">
+            <span class="doctor-avatar">
+                <img ng-src="{{'images/banner1.jpg'}}">
+            </span>
+            <span class="doctor-info">
+                <p style="margin-bottom: 10px;"><span style="font-size: 14px;font-weight: 600;">{{info.doctor_info.name}}</span><span style="margin-left: 10px;">{{info.doctor_info.title}}</span></p>
+                <p style="margin-bottom: 10px;">{{info.doctor_info.class}}</p>
+                <p>{{info.doctor_info.hospital_name}}</p>
+            </span>
+        </div>
+    </div>
+    <div class="answer-item" ng-repeat="list in info.answer_info">
+        <div class="answer-num">
+            问题<span style="margin-left: 2px;">{{list.num}}</span>
+        </div>
+        <div class="patient-answer">
+            {{list.question}}
+        </div>
+        <div class="answer-cont">
+            <span style="color: orange;">教授答疑：</span>{{list.answer}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div id="title-box">
+        <span class="return-icon" ng-click="gotoBack()">
+            <i class="iconfont iconfanhui"></i>
+        </span>
+    <span>{{info.name}}</span>
+    <span class="home-icon" ng-click="gotoHome()">
+            <i class="iconfont iconindex-0"></i>
+        </span>
+</div>
+<div id="box" style="padding-top: 1px;">
+    <div class="info-box" style="padding-top: 65px;">
+        <div class="doctor-box">
+            <span class="doctor-avatar" style="top: 18px;">
+                <img ng-src="{{'images/banner1.jpg'}}">
+            </span>
+            <span class="doctor-info">
+                <p style="margin-bottom: 10px;"><span style="font-size: 14px;font-weight: 600;">{{info.name}}</span><span style="margin-left: 10px;">{{info.title}}</span></p>
+                <p style="margin-bottom: 10px;">{{info.class}}</p>
+                <p>{{info.hospital_name}}</p>
+            </span>
+        </div>
+    </div>
+    <div class="doctor-info-box">
+        {{info.info}}
+    </div>
+</div>
+
+<div class="praise-box">
+    <i class="iconfont iconzan"></i>
+</div>
+<style>
+    .doctor-info-box{
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 170px;
+        bottom: 0;
+        background: #ffffff;
+        padding: 10px 10px;
+        overflow: auto;
+    }
+
+</style>

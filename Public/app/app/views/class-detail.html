@@ -1,0 +1,49 @@
+<div id="title-box">
+        <span class="return-icon" ng-click="gotoClass()">
+            <i class="iconfont iconfanhui"></i>
+        </span>
+    <span class="title-cont">{{info.class_title}}</span>
+    <span class="home-icon" ng-click="gotoHome()">
+            <i class="iconfont iconindex-0"></i>
+        </span>
+</div>
+<div id="box" style="padding-top: 1px;">
+    <div class="info-box">
+        <div class="title-box" style="border-bottom: 1px solid #F0F0F0;">
+            <span class="title-name">
+                <i class="iconfont iconshejiao_tuan_xingxing_"></i>
+                <span>讲题</span>
+            </span>
+            <span class="title-cont">{{info.class_title}}</span>
+        </div>
+        <div class="doctor-box">
+            <span class="doctor-avatar">
+                <img ng-src="{{'images/banner1.jpg'}}">
+            </span>
+            <span class="doctor-info">
+                <p style="margin-bottom: 10px;"><span style="font-size: 14px;font-weight: 600;">{{info.name}}</span><span style="margin-left: 10px;">{{info.title}}</span></p>
+                <p style="margin-bottom: 10px;">{{info.class}}</p>
+                <p>{{info.hospital_name}}</p>
+            </span>
+        </div>
+    </div>
+    <div style="width: 100%;height: 200px;background: #aaaaaa;">
+        <video width="100%" height="100%" controls>
+            <source src="movie.mp4" type="*">
+        </video>
+    </div>
+    <div class="video-info">
+        <p class="video-tite">
+            {{info.info}}
+        </p>
+    </div>
+</div>
+<style>
+    .title-cont{
+        display: inline-block;
+        width: 70%;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+    }
+</style>
